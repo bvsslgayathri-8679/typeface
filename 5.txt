@@ -1,0 +1,22 @@
+Crawling involves extracting necessary data from a website for analysis. For web crawling, we can use the libraries called "bs4"(BeautifulSoup) and "requests" in Python.
+
+Steps involved for crawling a website to save the images and text from the website include
+
+1. Firstly, we can use the "requests" library to fetch the website we are going to crawl.
+2. Later, the response from website is used as input to the "BeautifulSoup"(bs4) with the help of "html parser".
+3. "BeautifulSoup" enables us to extract all images links using the tag "img. 
+4. Similarly, we will use tags like "h1", "h2", "h3", "h4", "h5", "h6", "p", "span" etc to extract the "Text" from the website.
+5. Afterwards, we'll save the images to the designated folder and the text to a document.
+
+Basic code to request and perform web crawl using BeautifulSoup 
+
+import requests
+from bs4 import BeautifulSoup
+URL = "RandomWebsiteURL"
+getWebData = requests.get(URL)
+soup = BeautifulSoup(getWebData.text, "html.parser")
+images = soup.find_all('img')
+text = soup.find_all('p')
+text1 = soup.find_all('h1')
+
+# Using file read in Python, we can save the images in the designated folder and the text in a text document
