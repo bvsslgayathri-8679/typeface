@@ -30,8 +30,12 @@ def FindSubMatrix(matrix):
                 maxj = j
  
     print(tuple((maxi-max_val,maxj)),',',tuple((maxi-max_val,maxj+max_val)),',',tuple((maxi,maxj)),',',tuple((maxi,maxj+max_val))) 
+
+# taking custom input from user with no of rows 'n' 
+# n=int(input())
+# matrix=[list(map(int,input().split())) for i in range(n)]
  
-n=int(input())
-matrix=[list(map(int,input().split())) for i in range(n)]
- 
+#taking fixed input
+matrix=[[1, 0, 0, 1, 1], [1, 0, 0, 0, 1], [1, 0, 0, 1, 1], [1, 1, 1, 1, 1]]
+
 FindSubMatrix(matrix)
